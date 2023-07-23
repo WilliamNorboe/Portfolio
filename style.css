@@ -7,7 +7,8 @@ body{
     background-color: lightblue;
     display: flex;
     flex-direction: column;
-    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    gap: 10px;
 }
 
 .top{
@@ -62,9 +63,89 @@ body{
 /* .tableth2{
     display: none;
 } */
+.middle{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.middle h2{
+    font-size: 40px;
+}
+.projects{
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 930px;
+}
 
+.project{
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    width: 300px;
+    border-radius: 20px;
+}
 
-@media screen and (max-width: 750px) and (min-width: 381px) {
+.pimage{
+    background-color: red;
+    width: 300px;
+    height: 200px;
+}
+
+.pinfo{
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+}
+
+.projectName{
+    font-size: 20px;
+    font-weight: bold;
+}
+.icons{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding-right: 40px;
+}
+
+.description{
+    padding: 5px;
+    font-size: 17px;
+}
+
+.bottom{
+    display: flex;
+    background-color: midnightblue;
+    color: white;
+    padding: 20px;
+    justify-content: center;
+    border-radius: 30px;
+    gap: 20px;
+    max-width: 900px;
+    align-self: center;
+}
+.contactMe{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    gap: 10px;
+}
+.iconText{
+    display: flex;
+    gap: 15px;
+}
+
+.contactMe .icons{
+    align-self: center;
+}
+.iconText img{
+    width: 30px;
+    filter: invert(100%) sepia(14%) saturate(7491%) hue-rotate(187deg) brightness(123%) contrast(104%);
+}
+
+@media screen and (max-width: 750px) and (min-width: 498px) {
     body {
       background-color: lightgreen;
     }
@@ -85,7 +166,7 @@ body{
         left: 100px;
         top: 50px;
         right: 70px;
-        width:fit-content;
+        max-width: 440px;
         height:fit-content;
         z-index: 1;
     }
@@ -122,9 +203,13 @@ body{
     .about p{
         /* font-size: 20px; */
     }
+
+    .william{
+        width: 200px;
+    }
   }
 
-  @media screen and (max-width: 380px) {
+  @media screen and (max-width: 497px) {
     .top{
         flex-direction: column;
     }
@@ -133,5 +218,12 @@ body{
     }
     .tableth2{
         text-align: center;
+    }
+    .contactMe{
+        align-self: unset;
+    }
+    .bottom{
+        flex-direction: column;
+        align-self: unset;
     }
   }
