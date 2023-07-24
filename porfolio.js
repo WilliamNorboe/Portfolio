@@ -10,7 +10,7 @@ gitHub[gitHub.length-1].addEventListener("click", gitHubClick);
 
 function linkdinClick(){
     console.log("me clicked");
-    window.open("https://www.w3schools.com");
+    window.open("https://www.linkedin.com/in/william-norboe-37069322b?trk=public_profile_browsemap");
 }
 
 function gitHubClick(){
