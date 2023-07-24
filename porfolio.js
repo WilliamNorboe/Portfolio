@@ -17,22 +17,27 @@ function gitHubClick(){
     window.open("https://github.com/WilliamNorboe");
 }
 
-const projectClass = (name, img, description) => {
+const projectClass = (name, img, description, link, github) => {
     return{
         name,
         img,
-        description
+        description,
+        link,
+        github
     }
 }
 
 let projects = [];
-projects.push(projectClass("Project Name", "", "Short Description of the project. Just a couple sentences will do."));
-projects.push(projectClass("Project Name", "", "Short Description of the project. Just a couple sentences will do."));
-projects.push(projectClass("Project Name", "", "Short Description of the project. Just a couple sentences will do."));
-projects.push(projectClass("Project Name", "", "Short Description of the project. Just a couple sentences will do."));
-projects.push(projectClass("Project Name", "", "Short Description of the project. Just a couple sentences will do."));
-projects.push(projectClass("Project Name", "", "Short Description of the project. Just a couple sentences will do."));
+projects.push(projectClass("Fwitter", "./social.png", "A social media site made usifn react where users can send messages and follow users. Data is stored using Firebase.", "https://williamnorboe.github.io/Fwitter/", "https://github.com/WilliamNorboe/Fwitter"));
+projects.push(projectClass("Memory Game", "./memory.png", "A memory game where users try to remember which pokemon they have already clicked on.", "https://williamnorboe.github.io/memory-card/", "https://github.com/WilliamNorboe/memory-card"));
+projects.push(projectClass("Weather App", "./weather.png", "Display the temperature of a place given a location and displays a related gif.", "https://williamnorboe.github.io/Weather-App/", "https://github.com/WilliamNorboe/Weather-App"));
+projects.push(projectClass("ToDo List", "./todo.png", "Allows the user to created lists of items and stores this data for future reference.", "https://williamnorboe.github.io/ToDo-List/", "https://github.com/WilliamNorboe/ToDo-List"));
+projects.push(projectClass("CV Editor", "./cv.png", "A form where the user can enter information for a CV. This is just an exampel so the information is not uploaded anywhere.", "https://williamnorboe.github.io/cv-project/", "https://github.com/WilliamNorboe/cv-project"));
+projects.push(projectClass("Battleship", "./battleship.png", "A simpel game of battleship where the user can place boats and then play againast the CPU.", "https://williamnorboe.github.io/Battleship/", "https://github.com/WilliamNorboe/Battleship"));
 
+const openWindow = (link) => {
+    window.open(link);
+}
 
 let projectsDiv = document.querySelector(".projects");
 for(let i = 0; i < projects.length; ++i){
@@ -41,6 +46,7 @@ for(let i = 0; i < projects.length; ++i){
     
     let pimage = document.createElement("div");
     pimage.classList = "pimage";
+    pimage.style = 'background-image: url("' + projects[i].img + '");';
     projectDiv.appendChild(pimage);
 
     let pinfo = document.createElement("div");
@@ -57,10 +63,13 @@ for(let i = 0; i < projects.length; ++i){
     let icon = document.createElement("img");
     icon.classList = "icon";
     icon.src = "tab-plus.svg";
+    console.log(projects[i]);
+    icon.addEventListener("click", ()=>{openWindow(projects[i].link);});
     icons.appendChild(icon);
 
     let gitHub = document.createElement("i");
     gitHub.classList = "devicon-github-original colored";
+    gitHub.addEventListener("click", ()=>{openWindow(projects[i].github);});
     icons.appendChild(gitHub);
 
     pinfo.appendChild(icons);
