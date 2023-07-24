@@ -149,10 +149,7 @@ body{
     filter: invert(100%) sepia(14%) saturate(7491%) hue-rotate(187deg) brightness(123%) contrast(104%);
 }
 
-@media screen and (max-width: 750px) and (min-width: 498px) {
-    body {
-      background-color: lightgreen;
-    }
+@media screen and (max-width: 765px) and (min-width: 498px) {
     .top{
         position: relative;
         /* align-self: flex-start; */
