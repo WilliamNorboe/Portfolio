@@ -34,6 +34,7 @@ projects.push(projectClass("Weather App", "./assets/weather.png", "Display the t
 projects.push(projectClass("ToDo List", "./assets/todo.png", "Allows the user to created lists of items and stores this data for future reference.", "https://williamnorboe.github.io/ToDo-List/", "https://github.com/WilliamNorboe/ToDo-List"));
 projects.push(projectClass("CV Editor", "./assets/cv.png", "A form where the user can enter information for a CV. This is just an exampel so the information is not uploaded anywhere.", "https://williamnorboe.github.io/cv-project/", "https://github.com/WilliamNorboe/cv-project"));
 projects.push(projectClass("Battleship", "./assets/battleship.png", "A simpel game of battleship where the user can place boats and then play againast the CPU.", "https://williamnorboe.github.io/Battleship/", "https://github.com/WilliamNorboe/Battleship"));
+projects.push(projectClass("Web-Face-Cam-Recognizer", "./assets/face.png", "A website that lets the user take a photo of themselves. It will then detect their face and make a prediction for their age and gender.", "https://williamnorboe.github.io/Web-Cam-Face-Recognizer/", "https://github.com/WilliamNorboe/Web-Cam-Face-Recognizer"));
 
 const openWindow = (link) => {
     window.open(link);
