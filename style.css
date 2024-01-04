@@ -24,6 +24,7 @@ body{
     border-radius: 10px;
 }
 
+
 .container {
     position: relative;
     text-align: center;
@@ -34,9 +35,12 @@ body{
     position: absolute;
     top: 90%;
     left: 50%;
-    font-size: 45px;
+    font-size: 41px;
+    font-weight: bold;
     width: max-content;
     transform: translate(-50%, -50%);
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
 }
 
 .about{
