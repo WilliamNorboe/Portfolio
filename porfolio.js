@@ -67,7 +67,7 @@ for(let i = 0; i < projects.length; ++i){
     let icon = document.createElement("img");
     icon.classList = "icon";
     icon.src = "./assets/tab-plus.svg";
-    console.log(projects[i]);
+    // console.log(projects[i]);
     icon.addEventListener("click", ()=>{openWindow(projects[i].link);});
     icons.appendChild(icon);
 
